@@ -1,0 +1,41 @@
+Algoritmo "Fibonacci"
+Var
+   var1, var2, aux, i, f1, f2, f_aux : inteiro // Adicionei variáveis de controle de exibição.
+   resp : caractere //Auxilia no cálculo no próximo termo.
+   termo : inteiro // variável para dizer em qual termo a sequência se encontra.
+Inicio
+   var1 <- 0
+   var2 <- 1
+   termo <- 2
+   resp <- "s"
+
+   enquanto (resp = "s") ou (resp = "S") faca
+      limpatela
+      escreval ("--- SEQUÊNCIA DE FIBONACCI ---")
+
+      // Refaz o histórico na tela.
+      f1 <- 0
+      f2 <- 1
+      escreval (" 1º termo: ", f1)
+      escreval (" 2º termo: ", f2)
+
+      para i de 3 ate termo faca //Lógica do número do termo
+         f_aux <- f1 + f2
+         escreval (i, "º termo: ", f_aux)
+         f1 <- f2
+         f2 <- f_aux
+      fimpara
+
+      escreval ("------------------------------")
+      escreval ("Deseja continuar a sequência? [S/N]") //Auto explicativo, mas usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
+      leia(resp)
+
+      se (resp = "s") ou (resp = "S") entao
+         termo <- (termo + 1)
+         se (termo = 47) entao
+            escreval ("Limite atingido!") //Variáveis do tipo "inteiro" tem limite de 32 bits no VisualG. Se a sequência continuasse averia um estouro da memória da variável
+            resp <- "N" //Resposta fora do sim para acabar com o programa obrigatóriamente no 47º termo.
+         fimse
+      fimse
+   fimenquanto
+Fimalgoritmo
