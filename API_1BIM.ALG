@@ -1,4 +1,4 @@
-Algoritmo "semnome"
+Algoritmo "ZynTec_API_1ºBimestre"
 Var
    r: inteiro
    var1, var2, aux, i, f1, f2, f_aux : inteiro // Adicionei variáveis de controle de exibição.
