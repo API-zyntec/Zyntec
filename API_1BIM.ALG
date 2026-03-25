@@ -1,4 +1,4 @@
-Algoritmo "semnome"
+Algoritmo "ZynTec_API_1ºBimestre"
 Var
    r: inteiro
    var1, var2, aux, i, f1, f2, f_aux : inteiro // Adicionei variáveis de controle de exibição.
@@ -10,7 +10,6 @@ Inicio
    var1 <- 0
    var2 <- 1
    termo <- 2
-   resp <- "s"
 
    enquanto r <> 0 faca
       limpatela
@@ -32,7 +31,8 @@ Inicio
       limpatela
 
       se (r=1) entao
-         enquanto (resp = "s") ou (resp = "S") faca
+         resp <- "C"
+         enquanto (resp = "C") ou (resp = "c") faca
             limpatela
             escreval ("--- SEQUÊNCIA DE FIBONACCI ---")
 
@@ -48,21 +48,23 @@ Inicio
                f1 <- f2
                f2 <- f_aux
             fimpara
+            
+            escreval ("[Digite C para o próximo número]")
 
-            escreval ("------------------------------")
-            escreval ("Deseja continuar a sequência? [S/N]") //Auto explicativo, mas usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
+            escreval ("------------------------------------")
+            escreval ("OPÇÕES SEQUÊNCIA") //usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
+            escreval ("------------------------------------")
+            escreval ("[V - Voltar]")
             leia(resp)
-
-            se (resp = "s") ou (resp = "S") entao
-               termo <- (termo + 1)
-               se (termo = 47) entao
-                  escreval ("Limite atingido!") //Variáveis do tipo "inteiro" tem limite de 32 bits no VisualG. Se a sequência continuasse averia um estouro da memória da variável
-                  resp <- "N" //Resposta fora do sim para acabar com o programa obrigatóriamente no 47º termo.
-               fimse
+            
+            termo <- (termo + 1)
+            
+            se (termo = 47) entao
+               escreval ("Limite atingido!") //Variáveis do tipo "inteiro" tem limite de 32 bits no VisualG. Se a sequência continuasse averia um estouro da memória da variável
+               resp <- "N" //Resposta fora do sim para acabar com o programa obrigatóriamente no 47º termo
             fimse
+            
          fimenquanto
-         escreval("Aperte F9 para retornar ao menu principal")
-         pausa
       senao
          se (r=2) entao
             escreval("Numeros triangulares")
