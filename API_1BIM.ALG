@@ -4,7 +4,7 @@ Var
    var1, var2, aux, i, f1, f2, f_aux : inteiro // Adicionei variáveis de controle de exibição.
    resp : caractere //Auxilia no cálculo no próximo termo.
    termo : inteiro // variável para dizer em qual termo a sequência se encontra
-   .
+   c_aux, cubo: real
 Inicio
    r <-1
    var1 <- 0
@@ -48,7 +48,7 @@ Inicio
                f1 <- f2
                f2 <- f_aux
             fimpara
-            
+
             escreval ("[Digite C para o próximo número]")
 
             escreval ("------------------------------------")
@@ -56,14 +56,14 @@ Inicio
             escreval ("------------------------------------")
             escreval ("[V - Voltar]")
             leia(resp)
-            
+
             termo <- (termo + 1)
-            
+
             se (termo = 47) entao
                escreval ("Limite atingido!") //Variáveis do tipo "inteiro" tem limite de 32 bits no VisualG. Se a sequência continuasse averia um estouro da memória da variável
                resp <- "N" //Resposta fora do sim para acabar com o programa obrigatóriamente no 47º termo
             fimse
-            
+
          fimenquanto
       senao
          se (r=2) entao
@@ -87,9 +87,21 @@ Inicio
                      pausa
                   senao
                      se (r=6) entao
-                        escreval("Sequencia de cubos")
-                        escreval("Aperte F9 para retornar ao menu principal")
-                        pausa
+                        resp <- "C"
+                        c_aux <- 1
+                        cubo <- 0
+                        enquanto (resp = "C") ou (resp = "c") faca
+                           cubo <- (c_aux ^ 3)
+                           escreval(cubo)
+                           c_aux <- (c_aux + 1)
+                           escreval ("[Digite C para o próximo número]")
+
+                           escreval ("------------------------------------")
+                           escreval ("OPÇÕES SEQUÊNCIA") //usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
+                           escreval ("------------------------------------")
+                           escreval ("[V - Voltar]")
+                           leia(resp)
+                        fimenquanto
                      senao
                         se (r=7) entao
                            escreval("Sequencia geometrica")
