@@ -1,10 +1,10 @@
 Algoritmo "ZynTec_API_1ºBimestre"
 Var
    r: inteiro
-   var1, var2, aux, i, f1, f2, f_aux : inteiro // Adicionei variáveis de controle de exibição.
+   var1, var2, aux, i, j, f1, f2, f_aux, c_aux : inteiro // Adicionei variáveis de controle de exibição.
    resp : caractere //Auxilia no cálculo no próximo termo.
    termo : inteiro // variável para dizer em qual termo a sequência se encontra
-   c_aux, cubo: real
+   cubo: real
 Inicio
    r <-1
    var1 <- 0
@@ -49,12 +49,11 @@ Inicio
                f2 <- f_aux
             fimpara
 
-            escreval ("[Digite C para o próximo número]")
-
             escreval ("------------------------------------")
             escreval ("OPÇÕES SEQUÊNCIA") //usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
             escreval ("------------------------------------")
-            escreval ("[V - Voltar]")
+            escreval ("[C] - Próximo número")
+            escreval ("[V] - Voltar")
             leia(resp)
 
             termo <- (termo + 1)
@@ -90,16 +89,22 @@ Inicio
                         resp <- "C"
                         c_aux <- 1
                         cubo <- 0
+                        
                         enquanto (resp = "C") ou (resp = "c") faca
-                           cubo <- (c_aux ^ 3)
-                           escreval(cubo)
+                           limpatela
+
+                           para j de 1 ate c_aux faca
+                                cubo <- (j ^ 3)
+                                escreval(j, "º termo: " ,cubo)
+                           fimpara
+
                            c_aux <- (c_aux + 1)
-                           escreval ("[Digite C para o próximo número]")
 
                            escreval ("------------------------------------")
                            escreval ("OPÇÕES SEQUÊNCIA") //usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
                            escreval ("------------------------------------")
-                           escreval ("[V - Voltar]")
+                           escreval ("[C] - Próximo número")
+                           escreval ("[V] - Voltar")
                            leia(resp)
                         fimenquanto
                      senao
