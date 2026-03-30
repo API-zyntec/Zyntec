@@ -92,6 +92,7 @@ Inicio
                         
                         enquanto (resp = "C") ou (resp = "c") faca
                            limpatela
+                           escreval ("--- SEQUÊNCIA DE CUBOS ---")
 
                            para j de 1 ate c_aux faca
                                 cubo <- (j ^ 3)
