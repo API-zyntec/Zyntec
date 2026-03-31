@@ -136,6 +136,6 @@ Inicio
             fimse
          fimse
       fimse
-   fimenquanto
+   fimenquanto            // yago
 
 Fimalgoritmo
