@@ -4,7 +4,7 @@ Var
    var1, var2, aux, i, j, f1, f2, f_aux, c_aux : inteiro // Adicionei variáveis de controle de exibição.
    resp : caractere //Auxilia no cálculo no próximo termo.
    termo : inteiro // variável para dizer em qual termo a sequência se encontra
-   cubo: real
+   cubo: real // felipe
 Inicio
    r <-1
    var1 <- 0
