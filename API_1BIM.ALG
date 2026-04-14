@@ -85,6 +85,7 @@ Inicio
                   leia(pause)
                   limpatela
                senao
+               //Mateus Daniel Santos
                   se (op=5) entao
                      escreval("Sequencia de quadrados perfeitos")
                      escreval("Aperte enter para retornar ao menu principal")
