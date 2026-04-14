@@ -1,18 +1,18 @@
-Algoritmo "semnome"
+Algoritmo "ZynTec_API_1?Bimestre"
+// Disciplina   : [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
 Var
-   r: inteiro
-   var1, var2, aux, i, f1, f2, f_aux : inteiro // Adicionei variáveis de controle de exibição.
+   op, var1, var2, aux, i, j, f1, f2, f_aux, pause, termo, c_aux : inteiro // Adicionei variáveis de controle de exibição.
    resp : caractere //Auxilia no cálculo no próximo termo.
-   termo : inteiro // variável para dizer em qual termo a sequência se encontra
-   .
+   cubo : real
 Inicio
-   r <-1
+   op <-1
    var1 <- 0
    var2 <- 1
    termo <- 2
    resp <- "s"
 
-   enquanto r <> 0 faca
+   enquanto op <> 0 faca
       limpatela
       escreval("Menu principal da calculadora")
       escreval("")
@@ -28,10 +28,10 @@ Inicio
       escreval("9- Sequencia tribonacci")
       escreval("0- Encerrar")
       escreval("")
-      leia (r)
+      leia (op)
       limpatela
 
-      se (r=1) entao
+      se (op=1) entao
          enquanto (resp = "s") ou (resp = "S") faca
             limpatela
             escreval ("--- SEQUÊNCIA DE FIBONACCI ---")
@@ -61,50 +61,81 @@ Inicio
                fimse
             fimse
          fimenquanto
-         escreval("Aperte F9 para retornar ao menu principal")
-         pausa
+         escreval("Aperte enter para retornar ao menu principal")
+         resp <- "s"
+         termo <- 2
+         leia(pause)
+         limpatela
       senao
-         se (r=2) entao
+         se (op=2) entao
             escreval("Numeros triangulares")
-            escreval("Aperte F9 para retornar ao menu principal")
-            pausa
+            escreval("Aperte enter para retornar ao menu principal")
+            leia(pause)
+            limpatela
          senao
-            se (r=3) entao
+            se (op=3) entao
                escreval("Sequencia de números primos")
-               escreval("Aperte F9 para retornar ao menu principal")
-               pausa
+               escreval("Aperte enter para retornar ao menu principal")
+               leia(pause)
+               limpatela
             senao
-               se (r=4) entao
+               se (op=4) entao
                   escreval("Sequencia fatorial")
-                  escreval("Aperte F9 para retornar ao menu principal")
-                  pausa
+                  escreval("Aperte enter para retornar ao menu principal")
+                  leia(pause)
+                  limpatela
                senao
-                  se (r=5) entao
+                  se (op=5) entao
                      escreval("Sequencia de quadrados perfeitos")
-                     escreval("Aperte F9 para retornar ao menu principal")
-                     pausa
+                     escreval("Aperte enter para retornar ao menu principal")
+                     leia(pause)
+                     limpatela
                   senao
-                     se (r=6) entao
-                        escreval("Sequencia de cubos")
-                        escreval("Aperte F9 para retornar ao menu principal")
-                        pausa
+                     se (op=6) entao
+                        resp <- "C"
+                        c_aux <- 1
+                        cubo <- 0
+                         enquanto (resp = "C") ou (resp = "c") faca
+                           limpatela
+                           escreval ("--- Sequência de cubos ---")
+
+                           para j de 1 ate c_aux faca
+                                cubo <- (j ^ 3)
+                                escreval(j, "º termo: " ,cubo)
+                           fimpara
+
+                           c_aux <- (c_aux + 1)
+
+                           escreval ("------------------------------------")
+                           escreval ("OPÇÕES SEQUÊNCIA") //usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
+                           escreval ("------------------------------------")
+                           escreval ("[C] - Próximo número")
+                           escreval ("[V] - Voltar")
+                           leia(resp)
+                        fimenquanto
+                        escreval("Aperte enter para retornar ao menu principal")
+                        leia(pause)
+                        limpatela
                      senao
-                        se (r=7) entao
+                        se (op=7) entao
                            escreval("Sequencia geometrica")
-                           escreval("Aperte F9 para retornar ao menu principal")
-                           pausa
+                           escreval("Aperte enter para retornar ao menu principal")
+                           leia(pause)
+                           limpatela
                         senao
-                           se (r=8) entao
+                           se (op=8) entao
                               escreval("Sequencia alternada")
-                              escreval("Aperte F9 para retornar ao menu principal")
-                              pausa
+                              escreval("Aperte enter para retornar ao menu principal")
+                              leia(pause)
+                              limpatela
                            senao
-                              se (r=9) entao
+                              se (op=9) entao
                                  escreval("Sequencia tribonacci")
-                                 escreval("Aperte F9 para retornar ao menu principal")
-                                 pausa
+                                 escreval("Aperte enter para retornar ao menu principal")
+                                 leia(pause)
+                                 limpatela
                               senao
-                                 se (r=0) entao
+                                 se (op=0) entao
                                     interrompa
                                  fimse
                               fimse
