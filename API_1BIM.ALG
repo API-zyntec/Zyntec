@@ -5,6 +5,10 @@ Var
    op, var1, var2, aux, i, j, f1, f2, f_aux, pause, termo, c_aux : inteiro // Adicionei variáveis de controle de exibição.
    resp : caractere //Auxilia no cálculo no próximo termo.
    cubo : real
+   
+   //variaveis para Sequência de Quadrados Perfeitos
+    ultimo_termo_quadrado, contador: inteiro
+    quadrado : real
 Inicio
    op <-1
    var1 <- 0
@@ -86,7 +90,23 @@ Inicio
                   limpatela
                senao
                   se (op=5) entao
-                     escreval("Sequencia de quadrados perfeitos")
+                     escreval("--- Sequencia de quadrados perfeitos ---")
+
+                     //Inicio do laço de repetição para validação da Sequencia
+                     repita
+                       escreval("informe qual o ultimo termo que você quer da Sequência de Quadrados Perfeitos:")
+                       leia(ultimo_termo_quadrado)
+                  
+                           se (ultimo_termo_quadrado) < 1 então
+                              escreval("!!O ultimo termo deve ser maior que 1!!")
+                           fimse
+                     ate (ultimo_termo_quadrado > 1) então
+                     
+                       para contador de 1 até ultimo_termo_quadrado faça
+                         quadrado <- (contador ^ 2)
+                         escreval(contador, "º termo: ", quadrado)
+                       fimpara
+                       
                      escreval("Aperte enter para retornar ao menu principal")
                      leia(pause)
                      limpatela
