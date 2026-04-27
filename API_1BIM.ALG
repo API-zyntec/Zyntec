@@ -2,10 +2,10 @@ Algoritmo "ZynTec_API_1?Bimestre"
 // Disciplina   : Algoritmo
 // Professor   : Sabha
 Var
-   op, aux, i, j, termo1, termo2, termo_aux, pause, termo, cubo_aux : inteiro // Adicionei variáveis de controle de exibição.
+   op, aux, i, j, termo1, termo2, termo_aux, pause, termo, cubo_aux, num1, cont : inteiro // Adicionei variÃ¡veis de controle de exibiÃ§Ã£o.
    cubo : real
    
-   //variaveis para Sequ�ncia de Quadrados Perfeitos
+   //variaveis para Sequência de Quadrados Perfeitos
     ultimo_termo_quadrado, contador: inteiro
     quadrado : real
 Inicio
@@ -18,7 +18,7 @@ Inicio
       escreval("Qual das opcoes abaixo deseja? ")
       escreval("1- Sequencia de fibonacci")
       escreval("2- Numeros triangulares")
-      escreval("3- Sequencia de números primos")
+      escreval("3- Sequencia de nÃºmeros primos")
       escreval("4- Sequencia fatorial")
       escreval("5- Sequencia de quadrados perfeitos")
       escreval("6- Sequencia de cubos")
@@ -32,18 +32,18 @@ Inicio
 
       se (op=1) entao
             limpatela
-            escreval ("--- SEQUÊNCIA DE FIBONACCI ---")
+            escreval ("--- SEQUÃŠNCIA DE FIBONACCI ---")
             escreval ("Quanto termos deseja na sequencia. Tem que ser maior doque 3")
             leia (termo)
             
-            enquanto termo < 3 faca  //confirma se é maior que 3
+            enquanto termo < 3 faca  //confirma se Ã© maior que 3
              limpatela
              escreval("O termo precisa maior que 3")
              leia(termo)
              se termo > 47 entao //limite 32bits
                limpatela
                escreval("O limite de 32bits do VisualG nos impede do termo ser maior que 47")
-               escreval("Por favor insira novamente um número menor que 48")
+               escreval("Por favor insira novamente um nÃºmero menor que 48")
                leia(termo)
             fimse
             fimenquanto
@@ -51,12 +51,12 @@ Inicio
             limpatela
             termo1 <- 0
             termo2 <- 1
-            escreval (" 1º termo: ", termo1)
-            escreval (" 2º termo: ", termo2)
+            escreval (" 1Âº termo: ", termo1)
+            escreval (" 2Âº termo: ", termo2)
             
-            para i de 3 ate termo faca //Lógica do número do termo
+            para i de 3 ate termo faca //LÃ³gica do nÃºmero do termo
                termo_aux <- termo1 + termo2
-               escreval (i, "º termo: ", termo_aux)
+               escreval (i, "Âº termo: ", termo_aux)
                termo1 <- termo2
                termo2 <- termo_aux
             fimpara
@@ -73,7 +73,27 @@ Inicio
             limpatela
          senao
             se (op=3) entao
-               escreval("Sequencia de números primos")
+               escreval("Sequencia de numeros primos")
+               escreval("")
+               escreval("Digite o número que deseja testar:")
+               leia(num1)
+               cont <- 0
+
+               para i de 1 ate num1 faca
+               se (num1 % i = 0) entao
+               cont <- cont + 1
+               fimse
+               fimpara
+
+               se (cont = 2) entao
+               escreval("")
+               escreval("o número ", num1, " é primo")
+            senao
+               escreval("")
+               escreval("o número ", num1, " não é primo")
+            fimse
+
+               escreval("")
                escreval("Aperte enter para retornar ao menu principal")
                leia(pause)
                limpatela
@@ -87,19 +107,19 @@ Inicio
                   se (op=5) entao
                      escreval("--- Sequencia de quadrados perfeitos ---")
 
-                     //Inicio do la�o de repeti��o para valida��o da Sequencia
+                     //Inicio do laço de repetição para validação da Sequencia
                      repita
-                       escreval("informe qual o ultimo termo que voc� quer da Sequ�ncia de Quadrados Perfeitos:")
+                       escreval("informe qual o ultimo termo que você quer da Sequência de Quadrados Perfeitos:")
                        leia(ultimo_termo_quadrado)
                   
-                           se (ultimo_termo_quadrado) < 1 ent�o
+                           se (ultimo_termo_quadrado) < 1 então
                               escreval("!!O ultimo termo deve ser maior que 1!!")
                            fimse
-                     ate (ultimo_termo_quadrado > 1) ent�o
+                     ate (ultimo_termo_quadrado > 1) então
                      
-                       para contador de 1 at� ultimo_termo_quadrado fa�a
+                       para contador de 1 até ultimo_termo_quadrado faça
                          quadrado <- (contador ^ 2)
-                         escreval(contador, "� termo: ", quadrado)
+                         escreval(contador, "º termo: ", quadrado)
                        fimpara
                        
                      escreval("Aperte enter para retornar ao menu principal")
@@ -108,7 +128,7 @@ Inicio
                   senao
                      se (op=6) entao
                      
-                        escreval("Insira a quantidade de termos que você deseja")
+                        escreval("Insira a quantidade de termos que vocÃª deseja")
                         leia(cubo_aux)
                         
                         enquanto (cubo_aux <= 0) faca //garante apenas positivos
@@ -119,11 +139,11 @@ Inicio
                         
                         cubo <- 0 //inicia a sequencia
                            limpatela
-                           escreval ("--- Sequência de cubos ---")
+                           escreval ("--- SequÃªncia de cubos ---")
 
                            para j de 1 ate cubo_aux faca
                               cubo <- (j ^ 3)
-                              escreval(j, "º termo: " ,cubo)
+                              escreval(j, "Âº termo: " ,cubo)
                            fimpara
 
                         escreval("Aperte enter para retornar ao menu principal")
