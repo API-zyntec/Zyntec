@@ -40,7 +40,7 @@
 <table>
 
 <tr>
-<th>ID</th> <th>Épico</th> <th>User Story</th> 
+<th>Épico</th> <th>User Story</th> 
 <th>Descrição</th> <th>Critério de Aceitação</th>
 <th>Prioridades</th> <th>Status</th>
 </tr>
