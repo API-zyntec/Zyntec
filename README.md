@@ -46,7 +46,7 @@
 </tr>
 
 <tr>
-<td>PB-01</td> <td>Interface</td> 
+<td>Interface</td> 
 <td>Como usuário quero visualizar um menu no programa para escolher qual sequência calcular</td> 
 <td>Criar interface em texto com menu de opções</td>
 <td>Menu deve aparecer ao iniciar a aplicação</td>
@@ -55,7 +55,7 @@
 </tr>
 
 <tr>
-<td>PB-02</td> <td>Fluxo do sistema</td> 
+<td>Fluxo do sistema</td> 
 <td>Como usuário quero executar apenas um cálculo por vez para facilitar o uso</td> 
 <td>Sistema deve solicitar a sequência e executar somente um cálculo</td>
 <td>Após executar cálculo o sistema deve retornar ao menu</td>
@@ -64,7 +64,7 @@
 </tr>
 
 <tr>
-<td>PB-04</td> <td>Fluxo do sistema</td> 
+<td>Fluxo do sistema</td> 
 <td>Como usuário quero continuar executando cálculos até decidir encerrar o programa</td> 
 <td>Sistema deve repetir o menu após cada cálculo</td>
 <td>Usuário deve poder escolher opção de sair</td>
@@ -73,7 +73,7 @@
 </tr>
 
 <tr>
-<td>PB-03</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero da sequência de Fibonacci para utilizar na minha área de estudo, mostrando n elementos.</td> 
 <td>Sistema deve fazer o padrão da sequência até N</td>
 <td>Usuário deve inserir os números e obter a sequência de Fibonacci até o número inserido</td>
@@ -82,7 +82,7 @@
 </tr>
 
 <tr>
-<td>PB-09</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, preciso a função Sequência de Cubos para encontrar os cubos de n, podendo ser mostrar o resultado final ou em lista, para caso de estudo.</td> 
 <td>
 Sistema deve fazer o padrão da sequência até N</td>
@@ -92,7 +92,7 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-05</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero a função de Números Triangulares para calcular o número triangular na posição N para caso de estudo.</td> 
 <td>Sistema deve fazer o padrão da sequência até N utilizando a fórmula</td>
 <td>Usuário deve inserir os números e obter os números triangulares de n</td>
@@ -101,7 +101,7 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-06</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero a função de Sequência de Números Primos, podendo mostrar o resultado final ou em lista, para caso de estudo.</td> 
 <td>Sistema deve identificar números primos e fazer o padrão da sequência até N</td>
 <td>Usuário deve inserir os números e obter a sequência de números primos até n</td>
@@ -110,7 +110,7 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-08</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero a função de Sequência de Quadrados Perfeitos para encontrar os quadrados perfeitos de n, podendo mostrar o resultado final ou em lista, para caso de estudo.</td> 
 <td>Sistema deve fazer o padrão da sequência até N utilizando o padrão correto</td>
 <td>Usuário deve inserir os números e obter a sequência dos quadrados perfeitos até n</td>
@@ -119,7 +119,7 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-11</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero a função Sequência Alternada para criar um padrão sequencial, utilizando valor n, para caso de estudo.</td> 
 <td>SIstema deve fazer o padrão da sequência com sua definição até N</td>
 <td>Usuário deve inserir os números e o padrão da sequência e obter seu resultado</td>
@@ -128,8 +128,8 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-10</td> <td>Sequência</td> 
-<td>Como Usuário da calculadora, quero a função Sequência Geométrica para encontrar a função geométrica n, para caso de estudo.<td> 
+<td>Sequência</td> 
+<td>Como Usuário da calculadora, quero a função Sequência Geométrica para encontrar a função geométrica n, para caso de estudo.</td> 
 <td>Sistema deve fazer o padrão da sequência até N utilizando a fórmula</td>
 <td>Usuário deve inserir os números e obter a resposta a função geométrica de n</td>
 <td>Baixa</td>
@@ -137,7 +137,7 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-07</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero a função de Sequência Fatorial para encontrar o fatorial de n, podendo mostrar o resultado final ou em lista, para caso de estudo.</td> 
 <td>Sistema deve fazer o padrão da sequência até N</td>
 <td>Usuário deve inserir os números e obter a sequência fatorial de n</td>
@@ -146,7 +146,7 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>PB-12</td> <td>Sequência</td> 
+<td>Sequência</td> 
 <td>Como Usuário da calculadora, quero a função Sequência de Tribonacci para encontrar a sequência de n, podendo mostrar o resultado final ou em lista, para caso de estudo.</td> 
 <td>Sistema deve fazer o padrão da sequência até N</td>
 <td>Usuário deve inserir os números e obter a sequência de Tribonacci até o número inserido</td>
