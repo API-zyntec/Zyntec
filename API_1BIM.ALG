@@ -2,7 +2,7 @@ Algoritmo "ZynTec_API_1?Bimestre"
 // Disciplina   : Algoritmo
 // Professor   : Sabha
 Var
-   op, i, pause, termo, cont, sinal, num1 : inteiro // padronizindo variaveis sequencia
+   op, i, j, pause, termo, cont, sinal, num1 : inteiro // padronizindo variaveis sequencia
    valor, valor2, valor_aux: real
 
 Inicio
@@ -73,25 +73,30 @@ Inicio
             se (op=3) entao
                escreval("--- Sequência de números primos ---")
                escreval("")
-               escreval("Digite o número que deseja testar:")
+               escreval("Até qual número deseja listar?")
                leia(num1)
-               cont <- 0
 
-               para i de 1 ate num1 faca
-                  se (num1 % i = 0) entao
-                     cont <- cont + 1
-                  fimse
+               escreval("Números primos encontrados:")
+               para j de 1 ate num1 faca
+               cont <- 0
+               // O 'j' passa por todos os números de 1 até o num1
+
+               para i de 1 ate j faca
+               se (j % i = 0) entao
+               cont <- cont + 1
+               // O 'i' testa se o número atual 'j' é primo
+               fimse
                fimpara
 
                se (cont = 2) entao
-                  escreval("")
-                  escreval("o número ", num1, " é primo")
-               senao
-                  escreval("")
-                  escreval("o número ", num1, " não é primo")
+               escreva(j:1, " ")
+               // Se for primo (2 divisões), ele entra na lista
                fimse
+               fimpara
 
                escreval("")
+               escreval("")
+
                escreval("Pressione enter para retornar ao menu principal")
                leia(pause)
                limpatela
