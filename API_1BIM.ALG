@@ -1,21 +1,12 @@
 Algoritmo "ZynTec_API_1?Bimestre"
-// Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi
+// Disciplina   : Algoritmo
+// Professor   : Sabha
 Var
-   op, var1, var2, aux, i, j, f1, f2, f_aux, pause, termo, c_aux, num1, cont : inteiro // Adicionei variáveis de controle de exibição.
-   resp : caractere //Auxilia no cálculo no próximo termo.
-   cubo : real
-   
-   //variaveis para Sequência de Quadrados Perfeitos
-    ultimo_termo_quadrado, contador: inteiro
-    quadrado : real
-    
+   op, i, pause, termo, cont, sinal, num1 : inteiro // padronizindo variaveis sequencia
+   valor, valor2, valor_aux: real
+
 Inicio
    op <-1
-   var1 <- 0
-   var2 <- 1
-   termo <- 2
-   resp <- "s"
 
    enquanto op <> 0 faca
       limpatela
@@ -37,49 +28,48 @@ Inicio
       limpatela
 
       se (op=1) entao
-         enquanto (resp = "s") ou (resp = "S") faca
+         limpatela
+         escreval ("--- Sequência de Fibonacci ---")
+         escreval ("Quanto termos deseja na sequencia. Tem que ser maior doque 3")
+         leia (termo)
+
+         enquanto (termo < 3) ou (termo > 47) faca  //confirma se Ã© maior que 3
             limpatela
-            escreval ("--- Sequência de Fibonacci ---")
-
-            // Refaz o histórico na tela.
-            f1 <- 0
-            f2 <- 1
-            escreval (" 1º termo: ", f1)
-            escreval (" 2º termo: ", f2)
-
-            para i de 3 ate termo faca //Lógica do número do termo
-               f_aux <- f1 + f2
-               escreval (i, "º termo: ", f_aux)
-               f1 <- f2
-               f2 <- f_aux
-            fimpara
-
-            escreval ("------------------------------")
-            escreval ("Deseja continuar a sequência? [S/N]") //Auto explicativo, mas usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
-            leia(resp)
-
-            se (resp = "s") ou (resp = "S") entao
-               termo <- (termo + 1)
-               se (termo = 47) entao
-                  escreval ("Limite atingido!") //Variáveis do tipo "inteiro" tem limite de 32 bits no VisualG. Se a sequência continuasse averia um estouro da memória da variável
-                  resp <- "N" //Resposta fora do sim para acabar com o programa obrigatóriamente no 47º termo.
-               fimse
+            se termo > 47 entao //limite 32bits
+               limpatela
+               escreval("O limite de 32bits do VisualG nos impede do termo ser maior que 47")
+               escreval("Por favor insira novamente um número menor que 48")
+               leia(termo)
+            senao
+                 escreval("O termo precisa maior que 3")
+                 leia(termo)
             fimse
          fimenquanto
-         escreval("Aperte enter para retornar ao menu principal")
-         resp <- "s"
-         termo <- 2
-         leia(pause)
+
          limpatela
+         valor <- 0
+         valor2 <- 1
+         escreval (" 1º termo: ", valor)
+         escreval (" 2º termo: ", valor2)
+
+         para i de 3 ate termo faca //LÃ³gica do nÃºmero do termo
+            valor_aux <- valor + valor2
+            escreval (i, "º termo: ", valor_aux)
+            valor <- valor2
+            valor2 <- valor_aux
+         fimpara
+
+         escreval ("------------------------------")
+         escreval("Pressione enter para retornar ao menu principal")
+         leia(pause)
+         limpatela//fim fibonacci
       senao
-      
          se (op=2) entao
             escreval("Números triângulares")
-            escreval("Aperte enter para retornar ao menu principal")
+            escreval("Pressione enter para retornar ao menu principal")
             leia(pause)
             limpatela
          senao
-         
             se (op=3) entao
                escreval("--- Sequência de números primos ---")
                escreval("")
@@ -94,95 +84,110 @@ Inicio
                fimpara
 
                se (cont = 2) entao
-                  escreval("o número ", num1, " é primo")
                   escreval("")
-                  senao
-                       escreval("O número ", num1, " não é primo")
-                       escreval("")
+                  escreval("o número ", num1, " é primo")
+               senao
+                  escreval("")
+                  escreval("o número ", num1, " não é primo")
                fimse
-               escreval("Aperte enter para retornar ao menu principal")
+
+               escreval("")
+               escreval("Pressione enter para retornar ao menu principal")
                leia(pause)
                limpatela
-               
             senao
                se (op=4) entao
-                  escreval("Sequência fatorial")
-                  escreval("Aperte enter para retornar ao menu principal")
+                  escreval("--- Sequência fatorial ---")
+                  escreval("Pressione enter para retornar ao menu principal")
                   leia(pause)
                   limpatela
-
                senao
                   se (op=5) entao
                      escreval("--- Sequência de quadrados perfeitos ---")
-                     escreval("")
 
                      //Inicio do laço de repetição para validação da Sequencia
                      repita
-                       escreval("Informe qual o último termo que você quer da sequência:")
-                       leia(ultimo_termo_quadrado)
+                        escreval("Informe qual a quantia de termos que você quer da sequência:")
+                        leia(termo)
 
-                           se (ultimo_termo_quadrado) <= 1 então
-                              escreval("O último termo deve ser maior que 1!!")
-                           fimse
-                     ate (ultimo_termo_quadrado > 1) então
+                        se (termo) <= 1 então
+                           escreval("A quantia de termos deve ser maior que 1!!")
+                        fimse
+                     ate (termo > 1) então
 
-                       para contador de 1 até ultimo_termo_quadrado faça
-                         quadrado <- (contador ^ 2)
-                         escreval(contador, "º termo: ", quadrado)
-                       fimpara
+                     para i de 1 até termo faça
+                        valor <- (i ^ 2)
+                        escreval(i, "º termo: ", valor)
+                     fimpara
 
-                     escreval("Aperte enter para retornar ao menu principal")
+                     escreval("Pressione enter para retornar ao menu principal")
                      leia(pause)
                      limpatela
-                     
                   senao
                      se (op=6) entao
-                        resp <- "C"
-                        c_aux <- 1
-                        cubo <- 0
-                         enquanto (resp = "C") ou (resp = "c") faca
+                        escreval ("--- Sequência de cubos ---")
+                        escreval("Insira a quantidade de termos que vocÃª deseja")
+                        leia(termo)
+
+                        enquanto (termo <= 0) faca //garante apenas positivos
                            limpatela
-                           escreval ("--- Sequência de cubos ---")
-
-                           para j de 1 ate c_aux faca
-                                cubo <- (j ^ 3)
-                                escreval(j, "º termo: " ,cubo)
-                           fimpara
-
-                           c_aux <- (c_aux + 1)
-
-                           escreval ("------------------------------------")
-                           escreval ("OPÇÕES SEQUÊNCIA") //usa a váriavel "resp" para o algoritmo saber a vontade do usuário.
-                           escreval ("------------------------------------")
-                           escreval ("[C] - Próximo número")
-                           escreval ("[V] - Voltar")
-                           leia(resp)
+                           escreval("O termo precisa ser maior que 0")
+                           leia(termo)
                         fimenquanto
-                        escreval("Aperte enter para retornar ao menu principal")
+
+                        valor <- 0 //inicia a sequencia
+                        limpatela
+                        escreval ("--- Sequência de cubos ---")
+
+                        para i de 1 ate termo faca
+                           valor <- (i ^ 3)
+                           escreval(i, "Âº termo: " ,valor)
+                        fimpara
+
+                        escreval("Pressione enter para retornar ao menu principal")
                         leia(pause)
                         limpatela
-                        
                      senao
                         se (op=7) entao
-                           escreval("Sequência geométrica")
-                           escreval("Aperte enter para retornar ao menu principal")
+                           escreval("--- Sequência geometrica ---")
+                           escreval("Pressione enter para retornar ao menu principal")
                            leia(pause)
                            limpatela
-                           
                         senao
                            se (op=8) entao
-                              escreval("Sequência alternada")
-                              escreval("Aperte enter para retornar ao menu principal")
+                              escreval("--- Sequência alternada ---")
+                              escreval("Digite 1 para começo positivo ou -1 para negativo")
+                              leia (sinal)
+                              enquanto (sinal <> 1) e (sinal <> -1) faca
+                                 escreval("Digite 1 para começo positivo ou -1 para negativo")
+                                 leia (sinal)
+                              fimenquanto
+                              escreval("Qual o primeiro termo da sequência?")
+                              leia(valor)
+
+                              escreval("Qual a razão da sequência")
+                              leia(valor2)
+
+                              escreval("Quantos termos tem a sequência?")
+                              leia(termo)
+                              enquanto termo <= 1 faca
+                                 escreval("Quantos termos tem a sequência? (apenas números positivos maiores que 1)")
+                                 leia(termo)
+                              fimenquanto
+                              para i de 1 até termo faça
+                                 escreval(i, "º termo: ",valor * sinal)
+                                 valor <- valor + valor2
+                                 sinal <- sinal * (-1)
+                              fimpara
+                              escreval("Pressione enter para retornar ao menu principal")
                               leia(pause)
                               limpatela
-                              
                            senao
                               se (op=9) entao
-                                 escreval("Sequência tribonacci")
-                                 escreval("Aperte enter para retornar ao menu principal")
+                                 escreval("--- Sequência tribonacci ---")
+                                 escreval("Pressione enter para retornar ao menu principal")
                                  leia(pause)
                                  limpatela
-                                 
                               senao
                                  se (op=0) entao
                                     interrompa
@@ -197,4 +202,5 @@ Inicio
          fimse
       fimse
    fimenquanto
-fimalgoritmo
+
+Fimalgoritmo
