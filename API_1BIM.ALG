@@ -2,7 +2,7 @@ Algoritmo "ZynTec_API_1?Bimestre"
 // Disciplina   : Algoritmos
 // Professor   : Fabiano Sabha Walczak
 Var
-   op, i, j, pause, termo, sinal : inteiro
+   op, i, j, pause, termo, sinal, resp: inteiro
    valor, valor2, valor_aux : real
 
 Inicio
@@ -18,7 +18,7 @@ Inicio
       escreval("3- Sequência fatorial(Em Breve)")
       escreval("4- Sequência de quadrados perfeitos")
       escreval("5- Sequência de cubos")
-      escreval("6- Sequência geométrica(Em Breve)")
+      escreval("6- Sequência geométrica")
       escreval("7- Sequência alternada")
       escreval("8- Sequência tribonacci(Em Breve)")
       escreval("9- Encerrar")
@@ -26,10 +26,10 @@ Inicio
       leia (op)
       limpatela
       Escolha op
-      
+
       Caso 9
          interrompa
-         
+
       Caso 0
          limpatela
          escreval ("--- Sequência de Fibonacci ---")
@@ -173,7 +173,56 @@ Inicio
          limpatela
 
       Caso 6
-         escreval("--- Sequência geometrica ---")
+         escreval("--- Sequência geométrica ---")
+         escreval("Digite qual das classificações quer? 1-Crescente, 2-Decrescente, 3-Oscilante: ")
+         leia(resp)
+         enquanto (resp<1) ou (resp>3) faca //Verifica se o usuário escolheu uma opção
+                  limpatela
+                  escreval("Por favor, digite 1 para crescente, 2 para descrescente ou 3 para oscilante: ")
+                  leia(resp)
+         fimenquanto
+         escreval("Digite o primeiro termo da sequência (Tem que ser maior que 0): ")
+         leia(valor)
+         enquanto (valor<=0) faca //Garante valor positivo
+                  escreval("Por favor, digite um valor maior que 0: ")
+                  leia(valor)
+         fimenquanto
+         escreval("Digite razão da sequência (Tem que ser maior que 0): ")
+         leia(valor2)
+         enquanto (valor2<=0) faca //Garante valor positivo
+                  escreval("Por favor, digite um valor maior que 0: ")
+                  leia(valor2)
+         fimenquanto
+         escreval("Terá quantos termos? ")
+         leia(termo)
+         enquanto (termo<=0) faca //Garante valor positivo
+                  escreval("Por favor, digite um valor maior que 0: ")
+                  leia(termo)
+         fimenquanto
+         
+         escolha resp //Separa entre crescente, decrescente e oscilante
+                 Caso 1 //Crescente
+                      limpatela
+                      para i de 1 ate termo faca
+                           escreval(i,"° termo: ",valor)
+                           valor<-valor*valor2
+                      fimpara
+                 Caso 2 //Decrescente
+                      limpatela
+                      valor<-valor*(-1) //Termo negativo
+                      para i de 1 ate termo faca
+                           escreval(i,"° termo: ",valor)
+                           valor<-valor*valor2
+                      fimpara
+                 Caso 3 //Oscilante
+                      limpatela
+                      valor2<-valor2*(-1) //Razão negativa
+                      para i de 1 ate termo faca
+                           escreval(i,"° termo: ",valor)
+                           valor<-valor*valor2
+                      fimpara
+         fimescolha
+         escreval("")
          escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
          limpatela
