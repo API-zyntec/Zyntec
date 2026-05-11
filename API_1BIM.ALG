@@ -3,7 +3,7 @@ Algoritmo "ZynTec_API_1?Bimestre"
 // Professor   : Fabiano Sabha Walczak
 Var
    op, i, j, pause, termo, sinal, resp: inteiro
-   valor, valor2, valor_aux : real
+   valor, valor2, valor3, valor_aux : real
 
 Inicio
 
@@ -20,7 +20,7 @@ Inicio
       escreval("5- Sequência de cubos")
       escreval("6- Sequência geométrica")
       escreval("7- Sequência alternada")
-      escreval("8- Sequência tribonacci(Em Breve)")
+      escreval("8- Sequência tribonacci")
       escreval("9- Encerrar")
       escreval("")
       leia (op)
@@ -267,9 +267,42 @@ Inicio
 
       outrocaso
          escreval("--- Sequência tribonacci ---")
+         escreval ("Quanto termos deseja na sequencia. Tem que ser maior doque 4")
+         leia (termo)//define quantia de termos
+
+         enquanto (termo < 4) ou (termo > 47) faca  //confirma se Ã© maior que 3
+            limpatela
+            se termo > 47 entao //limite 32bits
+               limpatela
+               escreval("O limite de 32bits do VisualG nos impede do termo ser maior que 47")
+               escreval("Por favor insira novamente um número menor que 48")
+               leia(termo)
+            senao
+               escreval("O termo precisa maior que 4")
+               leia(termo)
+            fimse
+         fimenquanto
+
+         limpatela
+         valor <- 0
+         valor2 <- 1
+         valor3 <- 1
+         escreval (" 1º termo: ", valor)
+         escreval (" 2º termo: ", valor2)
+         escreval (" 3º termo: ", valor3)
+         
+         para i de 4 ate termo faca //LÃ³gica do nÃºmero do termo
+            valor_aux <- valor + valor2 + valor3
+            escreval (i, "º termo: ", valor_aux)
+            valor <- valor2
+            valor2 <- valor3
+            valor3 <- valor_aux
+         fimpara
+
+         escreval ("------------------------------")
          escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
-         limpatela
+         limpatela//fim fibonacci
       fimescolha
    fimenquanto
 Fimalgoritmo
