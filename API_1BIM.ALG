@@ -174,52 +174,61 @@ Inicio
 
       Caso 6
          escreval("--- Sequência geométrica ---")
-         escreval("Digite qual das classificações quer? 1-Crescente, 2-Decrescente, 3-Oscilante: ")
+         escreval("Digite qual das classificações quer? 1-Crescente, 2-Decrescente, 3-Oscilante, 4-Constante: ")
          leia(resp)
-         enquanto (resp<1) ou (resp>3) faca //Verifica se o usuário escolheu uma opção
+         enquanto (resp<1) ou (resp>4) faca
                   limpatela
-                  escreval("Por favor, digite 1 para crescente, 2 para descrescente ou 3 para oscilante: ")
+                  escreval("Por favor, digite 1 para crescente, 2 para descrescente, 3 para oscilante ou 4 para constante: ")
                   leia(resp)
          fimenquanto
          escreval("Digite o primeiro termo da sequência (Tem que ser maior que 0): ")
          leia(valor)
-         enquanto (valor<=0) faca //Garante valor positivo
+         enquanto (valor<=0) faca
                   escreval("Por favor, digite um valor maior que 0: ")
                   leia(valor)
          fimenquanto
          escreval("Digite razão da sequência (Tem que ser maior que 0): ")
          leia(valor2)
-         enquanto (valor2<=0) faca //Garante valor positivo
+         enquanto (valor2<=0) faca
                   escreval("Por favor, digite um valor maior que 0: ")
+                  leia(valor2)
+         fimenquanto
+         enquanto (valor2<>1) e (resp = 4) faca
+                  escreval ("o valor da razão deve ser 1")
                   leia(valor2)
          fimenquanto
          escreval("Terá quantos termos? ")
          leia(termo)
-         enquanto (termo<=0) faca //Garante valor positivo
+         enquanto (termo<=0) faca
                   escreval("Por favor, digite um valor maior que 0: ")
                   leia(termo)
          fimenquanto
-         
-         escolha resp //Separa entre crescente, decrescente e oscilante
-                 Caso 1 //Crescente
+
+         escolha resp
+                 Caso 1
                       limpatela
                       para i de 1 ate termo faca
                            escreval(i,"° termo: ",valor)
                            valor<-valor*valor2
                       fimpara
-                 Caso 2 //Decrescente
+                 Caso 2
                       limpatela
-                      valor<-valor*(-1) //Termo negativo
+                      valor<-valor*(-1)
                       para i de 1 ate termo faca
                            escreval(i,"° termo: ",valor)
                            valor<-valor*valor2
                       fimpara
-                 Caso 3 //Oscilante
+                 Caso 3
                       limpatela
-                      valor2<-valor2*(-1) //Razão negativa
+                      valor2<-valor2*(-1)
                       para i de 1 ate termo faca
                            escreval(i,"° termo: ",valor)
                            valor<-valor*valor2
+                      fimpara
+                 Caso 4
+                      limpatela
+                      para i de 1 ate termo faca
+                           escreval (i,"° termo: ",valor)
                       fimpara
          fimescolha
          escreval("")
