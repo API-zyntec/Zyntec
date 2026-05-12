@@ -7,7 +7,7 @@ Var
 
 Inicio
 
-   Enquanto op <> 9 faca
+   Enquanto op < 9 faca
       limpatela
       escreval("--- Menu principal da calculadora ---")
       escreval("")
@@ -27,8 +27,6 @@ Inicio
       limpatela
       Escolha op
 
-      Caso 9
-         interrompa
 
       Caso 0
          limpatela
@@ -265,7 +263,7 @@ Inicio
          leia(pause)
          limpatela
 
-      outrocaso
+      caso 8
          escreval("--- Sequência tribonacci ---")
          escreval ("Quanto termos deseja na sequencia. Tem que ser maior doque 4")
          leia (termo)//define quantia de termos
@@ -290,7 +288,7 @@ Inicio
          escreval (" 1º termo: ", valor)
          escreval (" 2º termo: ", valor2)
          escreval (" 3º termo: ", valor3)
-         
+
          para i de 4 ate termo faca //LÃ³gica do nÃºmero do termo
             valor_aux <- valor + valor2 + valor3
             escreval (i, "º termo: ", valor_aux)
@@ -302,7 +300,10 @@ Inicio
          escreval ("------------------------------")
          escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
-         limpatela//fim fibonacci
+         limpatela//fim Tribonacci
+         
+         outrocaso
+         escreva("opcao inválida")
       fimescolha
    fimenquanto
 Fimalgoritmo
