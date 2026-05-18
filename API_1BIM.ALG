@@ -15,7 +15,7 @@ Inicio
       escreval("0- Sequência de Fibonacci")
       escreval("1- Números triângulares")
       escreval("2- Sequência de números primos")
-      escreval("3- Sequência fatorial(Em Breve)")
+      escreval("3- Sequência fatorial")
       escreval("4- Sequência de quadrados perfeitos")
       escreval("5- Sequência de cubos")
       escreval("6- Sequência geométrica")
@@ -123,7 +123,7 @@ Inicio
          leia (termo)
          i <- termo - 1
          valor <- termo
-         enquanto i <> 1 faça
+         enquanto i <> 1 faca
          valor <- (valor * i)
          i <- i - 1
          fimenquanto
