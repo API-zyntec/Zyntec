@@ -120,6 +120,15 @@ Inicio
       Caso 3
          escreval("--- Sequência fatorial ---")
          escreval("Pressione enter para retornar ao menu principal")
+         leia (termo)
+         i <- termo - 1
+         valor <- termo
+         enquanto i <> 1 faça
+         valor <- (valor * i)
+         i <- i - 1
+         fimenquanto
+         escreval (valor)
+
          leia(pause)
          limpatela
 
