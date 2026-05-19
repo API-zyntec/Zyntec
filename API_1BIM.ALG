@@ -6,7 +6,7 @@ Var
    valor, valor2, valor3, valor_aux : real
 
 Inicio
-
+   Mudacor("verde", "frente")
    Enquanto (op <> 9) faca
       limpatela
       escreval("--- Menu principal da calculadora ---")
