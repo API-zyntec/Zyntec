@@ -119,16 +119,18 @@ Inicio
 
       Caso 3
          escreval("--- Sequência fatorial ---")
-         escreval("Pressione enter para retornar ao menu principal")
+         escreval("Informe qual a quantia de termos que você quer da sequência: ")
          leia (termo)
-         i <- termo - 1
-         valor <- termo
-         enquanto i <> 1 faca
-         valor <- (valor * i)
-         i <- i - 1
-         fimenquanto
-         escreval (valor)
+         i <- 1
+         valor <- 1
 
+         para i de 1 ate termo faca
+         valor <- (valor * 1 * i)
+         escreval (i,"° termo:", valor)
+         fimpara
+         
+         
+         escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
          limpatela
 
