@@ -65,23 +65,26 @@ Inicio
          limpatela//fim fibonacci
 
       Caso 1
-         escreval("Números triângulares")
-         valor <- 0
+
+        escreval("NÃºmeros triÃ¢ngulares")
+         i <- 0
          valor2 <- 1
-         escreval("insira o termo da sequência que você quer chegar")
+         escreval("insira o termo da sequencia que voce quer chegar")
          leia (termo)
          limpatela
-         enquanto valor < termo faça   //enquanto a posição atual da repetição não alcançar o valor iserido pelo usuário, continua o calculo
+
+         para i de 1 até termo faça  //enquanto a posiÃ§Ã£o atual da repetiÃ§Ã£o nÃ£o alcanÃ§ar o valor iserido pelo usuÃ¡rio, continua o calculo
 
             valor_aux <- (valor2 * (valor2+1)/2)  //formula dos numeros triangulares
 
-            escreval (valor,"° termo:", valor_aux) //exibição de resultado
+            escreval (i,"Â° termo:", valor_aux) //exibiÃ§Ã£o de resultado
 
             valor2 <- valor2 + 1 //adiciona 1
 
-            valor<- valor + 1
+            i<- i + 1
 
-         fimenquanto
+         fimpara
+
          escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
          limpatela
