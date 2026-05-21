@@ -154,6 +154,14 @@ Sistema deve fazer o padrão da sequência até N</td>
 <td>Backlog</td>
 </tr>
 
+<tr>
+<td>Interface</td> 
+<td>Como Usuário da calculadora quero visualizar o programa com uma cor fora do padrão do sistema</td> 
+<td>Criar interface com cores que não sejam preto e branco</td>
+<td>As cores devem aparecem ao iniciar a aplicação</td>
+<td>Baixa</td>
+<td>Backlog</td>
+</tr>
 
 </table>
 
@@ -175,13 +183,13 @@ Sistema deve fazer o padrão da sequência até N</td>
 
 <tr>
 <td>2</td> <td></td> 
-<td>Em Andamento</td> 
+<td>Concluída</td> 
 <td><a href ="https://docs.google.com/spreadsheets/d/1ftcpz4QOgqfWZZaypad-cBNqk_CTsbYMT8bixuApViI/edit?gid=1281056417#gid=1281056417">Docs_Sprints</a></td>
 </tr>
 
 <tr>
 <td>3</td> <td></td> 
-<td>Em Breve</td> 
+<td>Em Andamento</td> 
 <td><a href ="https://docs.google.com/spreadsheets/d/1ftcpz4QOgqfWZZaypad-cBNqk_CTsbYMT8bixuApViI/edit?gid=1281056417#gid=1281056417">Docs_Sprints</a></td>
 </tr>
 
