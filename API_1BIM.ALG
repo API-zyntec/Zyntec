@@ -90,32 +90,40 @@ Inicio
          limpatela
 
       Caso 2
+
          escreval("--- Sequência de números primos ---")
          escreval("")
-         escreval("Até qual número deseja listar?")
+         escreval("Quantos termos da sequência você deseja?")
          leia(termo)
 
-         escreval("Números primos encontrados:")
-         para j de 1 ate termo faca
-            valor <- 0
-            // O 'j' passa por todos os números de 1 até o num1
+         enquanto termo <= 0 faca
+            escreval("Digite um número maior que 0: ")
+            leia(termo)
+         fimenquanto
 
-            para i de 1 ate j faca
-               se (j % i = 0) entao
-                  valor <- valor + 1
-                  // O 'i' testa se o número atual 'j' é primo
+         escreval("Primeiros ", termo, " números primos:")
+         valor <- 0   // contador de primos
+         i <- 2       // primeiro número
+
+         enquanto valor < termo faca
+            // verifica se i é primo
+            j <- 2
+            enquanto j <= i - 1 faca
+               se (i % j = 0) entao
+                  interrompa   // achou divisor logo não é primo
                fimse
-            fimpara
+               j <- j + 1
+            fimenquanto
 
-            se (valor = 2) entao
-               escreva(j:1, " ")
-               // Se for primo (2 divisões), ele entra na lista
+            se j > i - 1 entao
+               valor <- valor + 1
+               escreval(valor, "º termo: ", i)
             fimse
-         fimpara
+
+            i <- i + 1
+         fimenquanto
 
          escreval("")
-         escreval("")
-
          escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
          limpatela
@@ -138,6 +146,7 @@ Inicio
          limpatela
 
       Caso 4
+
          escreval("--- Sequência de quadrados perfeitos ---")
 
          //Inicio do laço de repetição para validação da Sequencia
