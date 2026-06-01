@@ -66,18 +66,22 @@ Inicio
 
       Caso 1
 
-        escreval("NÃºmeros triÃ¢ngulares")
+        escreval("Números triangulares")
          i <- 0
          valor2 <- 1
-         escreval("insira o termo da sequencia que voce quer chegar")
+         escreval("Quantos termos deseja na sequência?")
          leia (termo)
+         enquanto termo <= 0 faca
+            escreval("Digite um número maior que 0: ")
+            leia(termo)
+         fimenquanto
          limpatela
 
          para i de 1 até termo faça  //enquanto a posiÃ§Ã£o atual da repetiÃ§Ã£o nÃ£o alcanÃ§ar o valor iserido pelo usuÃ¡rio, continua o calculo
 
             valor_aux <- (valor2 * (valor2+1)/2)  //formula dos numeros triangulares
 
-            escreval (i,"Â° termo:", valor_aux) //exibiÃ§Ã£o de resultado
+            escreval (i,"° termo:", valor_aux) //exibiÃ§Ã£o de resultado
 
             valor2 <- valor2 + 1 //adiciona 1
 
@@ -130,8 +134,13 @@ Inicio
 
       Caso 3
          escreval("--- Sequência fatorial ---")
-         escreval("Informe qual a quantia de termos que você quer da sequência: ")
+         escreval("Quantos termos deseja na sequência?")
          leia (termo)
+         enquanto termo <= 0 faca
+            escreval("Digite um número maior que 0: ")
+            leia(termo)
+         fimenquanto
+         
          i <- 1
          valor <- 1
 
@@ -139,8 +148,8 @@ Inicio
          valor <- (valor * 1 * i)
          escreval (i,"° termo:", valor)
          fimpara
-         
-         
+
+
          escreval("Pressione enter para retornar ao menu principal")
          leia(pause)
          limpatela
@@ -149,15 +158,12 @@ Inicio
 
          escreval("--- Sequência de quadrados perfeitos ---")
 
-         //Inicio do laço de repetição para validação da Sequencia
-         repita
-            escreval("Informe qual a quantia de termos que você quer da sequência: ")
+         escreval("Quantos termos deseja na sequência?")
+         leia (termo)
+         enquanto termo <= 0 faca
+            escreval("Digite um número maior que 0: ")
             leia(termo)
-         //filtro de erro
-            se (termo) <= 1 então
-               escreval("A quantia de termos deve ser maior que 1: ")
-            fimse
-         ate (termo > 1) então
+         fimenquanto
          //sequencia
          para i de 1 até termo faça
             valor <- (i ^ 2)
@@ -170,7 +176,7 @@ Inicio
 
       Caso 5
          escreval ("--- Sequência de cubos ---")
-         escreval("Insira a quantidade de termos que você deseja")
+         escreval("Quantos termos deseja na sequência?")
          leia(termo)
 
          enquanto (termo <= 1) faca //garante apenas positivos +1
@@ -194,20 +200,23 @@ Inicio
 
       Caso 6
          escreval("--- Sequência geométrica ---")
-         escreval("Digite qual das classificações quer? 1-Crescente, 2-Decrescente, 3-Oscilante: ")
+         escreval("Digite qual das classificações quer?")
+         escreval("1-Crescente, 2-Decrescente, 3-Oscilante: ")
          leia(resp)
          enquanto (resp<1) ou (resp>3) faca
                   limpatela
-                  escreval("Por favor, digite 1 para crescente, 2 para descrescente ou 3 para oscilante: ")
+                  escreval("Por favor, digite:")
+                  escreval ("1 para crescente, 2 para descrescente ou 3 para oscilante: ")
                   leia(resp)
          fimenquanto
-         escreval("Digite o primeiro termo da sequência (Tem que ser maior que 0): ")
+         escreval("Digite o primeiro termo da sequência (Deve ser maior que 0): ")
          leia(valor)
          enquanto (valor<=0) faca
                   escreval("Por favor, digite um valor maior que 0: ")
                   leia(valor)
          fimenquanto
-         escreval("Digite a razão da sequência, tem que ser maior que 0 e caso queira constante, o valor é 1: ")
+         escreval("Digite a razão da sequência, deve ser maior que 0")
+         escreval("Caso queira constante, o valor é 1")
          leia(valor2)
          enquanto (valor2<=0) faca
                   escreval("Por favor, digite um valor maior que 0: ")
@@ -255,7 +264,7 @@ Inicio
             escreval("Digite 1 para começo positivo ou -1 para negativo: ")
             leia (sinal)
          fimenquanto
-         escreval("Qual o primeiro termo da sequência? ")
+         escreval("Qual o primeiro termo da sequência?(não coloque números negativos ")
          leia(valor)
 
          escreval("Qual a razão da sequência? ")
@@ -278,7 +287,7 @@ Inicio
 
       Caso 8
          escreval("--- Sequência tribonacci ---")
-         escreval ("Quanto termos deseja na sequência? Tem que ser maior do que 4 ")
+         escreval ("Quanto termos deseja na sequência? Deve que ser maior do que 4 ")
          leia (termo)//define quantia de termos
 
          enquanto (termo < 4) ou (termo > 47) faca  //confirma se Ã© maior que 3
