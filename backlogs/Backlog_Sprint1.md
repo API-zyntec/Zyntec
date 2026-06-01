@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+<b>Backlog referente a Sprint 1</b>
+</p>
+
+<p align="center">
   <a href ="#us"> User Stories</a>  |   
   <a href ="#dor">DoR</a>  |
   <a href ="#dod">DoD</a>
@@ -11,7 +15,7 @@
  <a id="us"></a>
 
 **Meta da Sprint:**  User Stories de  1 a 4, todos de prioridade alta.
-
+<table>
 <tr>
 <th>Épico</th> <th>User Story</th> 
 <th>Descrição</th> <th>Critério de Aceitação</th>
@@ -62,8 +66,9 @@ Sistema deve fazer o padrão da sequência até N</td>
 <td>Usuário deve inserir os números e obter a sequência dos cubos até n</td>
 <td>Alta</td>
 
-</tr>                                                                                                              |   1
+</tr>         
 
+</table>
 <h2 id="dor">DoR - Definition of Ready</h2>
 
 <ul>
