@@ -154,6 +154,14 @@ Sistema deve fazer o padrão da sequência até N</td>
 <td>Backlog</td>
 </tr>
 
+<tr>
+<td>Interface</td> 
+<td>Como Usuário da calculadora quero visualizar o programa com uma cor fora do padrão do sistema</td> 
+<td>Criar interface com cores que não sejam preto e branco</td>
+<td>As cores devem aparecem ao iniciar a aplicação</td>
+<td>Baixa</td>
+<td>Backlog</td>
+</tr>
 
 </table>
 
@@ -168,20 +176,20 @@ Sistema deve fazer o padrão da sequência até N</td>
 </tr>
 
 <tr>
-<td>1</td> <td></td> 
+<td>1</td> <td>16/03 a 05/04</td> 
 <td>Concluída</td> 
 <td><a href ="https://docs.google.com/spreadsheets/d/1ftcpz4QOgqfWZZaypad-cBNqk_CTsbYMT8bixuApViI/edit?gid=1281056417#gid=1281056417">Docs_Sprints</a></td>
 </tr>
 
 <tr>
-<td>2</td> <td></td> 
-<td>Em Andamento</td> 
+<td>2</td> <td>13/04 a 03/05</td> 
+<td>Concluída</td> 
 <td><a href ="https://docs.google.com/spreadsheets/d/1ftcpz4QOgqfWZZaypad-cBNqk_CTsbYMT8bixuApViI/edit?gid=1281056417#gid=1281056417">Docs_Sprints</a></td>
 </tr>
 
 <tr>
-<td>3</td> <td></td> 
-<td>Em Breve</td> 
+<td>3</td> <td>11/05 a 31/05</td> 
+<td>Concluída</td> 
 <td><a href ="https://docs.google.com/spreadsheets/d/1ftcpz4QOgqfWZZaypad-cBNqk_CTsbYMT8bixuApViI/edit?gid=1281056417#gid=1281056417">Docs_Sprints</a></td>
 </tr>
 
@@ -210,6 +218,12 @@ Sistema deve fazer o padrão da sequência até N</td>
 </ul>
 
 <h2 id="manual">Manual</h2>
+Para executar a Calculadora, siga os seguintes passos:<br>
+1. Verifique de possuir o **VisualG 3.0** instalado em seu computador<br>
+2. Faça o download do arquivo 'API_1BIM.ALG'<br>
+3. Abra o arquivo API_1BIM.ALG pelo VisualG<br>
+4. Pressione a tecla F9 em seu teclado ou clique na função executar no VisualG 3.0 para executar o programa<br>
+5. Siga as intruções apresentadas pelo console para utilizar a calculadora<br>
 
 <h2 id="equipe">Equipe</h2>
 
